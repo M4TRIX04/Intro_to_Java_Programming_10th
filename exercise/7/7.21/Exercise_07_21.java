@@ -20,6 +20,7 @@ public class Exercise_07_21 {
         int numOfSlots = input.nextInt();
         int[] slots = new int[numOfSlots];
         fall(balls,slots);
+        printBalls(balls,slots);
     }
     public static int[] fall(int balls, int[] slots) {
         int step = 0;       
@@ -28,26 +29,28 @@ public class Exercise_07_21 {
             for (int j = 0; j < slots.length - 1; j++) {
                 step = (int)(Math.random() * 2);
                 if (step > 0) {
-                    System.out.print("R");
+                    System.out.print(" R ");
                     result += 1;
                 } else {
-                    System.out.print("L");
+                    System.out.print(" L ");
                 }
-                slots[result]++;
+                
             }
+            slots[result]++;
             System.out.println();
         }
         return slots;
     }
-    public static void printBalls(int balls, int slots) {
-        for (int i = 0; i < balls) {
+    public static void printBalls(int balls, int[] slots) {
+        for (int i = 0; i < balls; i++) {
             for (int j = 0; j < slots.length; j++) {
-                if(balls - slots[j] < 5) {
-                    System.out.print("O");
+                if(i + slots[j] >= balls) {
+                    System.out.print(" O ");
                 } else {
-                    System.out.print(" ");
-                }
+                    System.out.print(" _ ");
+                }                
             }
+            System.out.println();
         }
     }
 }
