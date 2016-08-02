@@ -12,7 +12,6 @@
 public class Exercise_07_23 {
     public static void main(String[] args) {
         boolean[] box = new boolean[100];
-        boolean status = false;
         for (int i = 1; i <= 100; i++) {
             for (int j = i; j <= 100; j += i) {
                 change(box,j - 1);
