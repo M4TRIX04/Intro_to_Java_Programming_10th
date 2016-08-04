@@ -7,4 +7,11 @@
  *  a、b和c的值，然后显示实数根的个数以及所有的实数根。
  *
  */
-
+public class Exercise_07_25 {
+    public static void main(String[] args) {
+        
+    }
+    public static int solveQuadratic(double[] eqn, double[] roots) {
+        
+    }
+}
